@@ -1,0 +1,10 @@
+{% extends 'gestion/base.html' %}
+{% block content %}
+    <h2>Formulario de Cliente</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="{% url 'cliente_list' %}">Cancelar</a>
+    </form>
+{% endblock %}
